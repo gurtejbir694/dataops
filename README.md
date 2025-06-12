@@ -116,13 +116,6 @@ Check service status:
 ```bash
 dataops status --verbose
 ```
-
-## Development
-
-- Source code: `src/dataops/`
-- Run tests locally and push updates to GitHub.
-- Report issues or contribute via pull requests.
-
 ## License
 
 MIT License
