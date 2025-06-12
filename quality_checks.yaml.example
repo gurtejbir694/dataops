@@ -1,0 +1,22 @@
+fields:
+  - name: id
+    type: string
+    checks:
+      not_null: true
+      unique: true
+  - name: name
+    type: string
+    checks:
+      not_null: true
+  - name: email
+    type: string
+    checks:
+      regex: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+  - name: age
+    type: integer
+    checks:
+      range: [18, 80]
+  - name: salary
+    type: integer
+    checks:
+      range: [30000, 120000]

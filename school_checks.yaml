@@ -1,0 +1,18 @@
+fields:
+  - name: rollno
+    type: string
+    checks:
+      not_null: true
+      unique: true
+  - name: phone
+    type: string
+    checks:
+      regex: "^\\+?[1-9]\\d{1,14}$"
+  - name: results
+    type: float
+    checks:
+      range: [0, 100]
+  - name: grade
+    type: string
+    checks:
+      not_null: true

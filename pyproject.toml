@@ -1,0 +1,33 @@
+[project]
+name = "dataops"
+version = "0.1.0"
+description = "Generic DataOps CLI for data quality pipelines"
+dependencies = [
+    "pandas>=2.3.0",
+    "typer>=0.16.0",
+    "pyyaml>=6.0.2",
+    "faker>=37.0.0",
+    "sqlalchemy>=2.0.0",
+    "python-dotenv>=1.1.0",
+    "psutil>=6.1.0",
+    "uuid6>=2024.7.10",
+    # Optional
+    "apache-airflow==3.0.2; extra == 'airflow'",
+    "streamlit==2.0.0; extra == 'dashboard'",
+    "psycopg2-binary==2.9.7; extra == 'postgres'",
+]
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools>=80.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+dataops = "dataops.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["dataops*"]
+
+[project.urls]
+Homepage = "https://github.com/dataops-project"

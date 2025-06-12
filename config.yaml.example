@@ -1,0 +1,14 @@
+data_dir: .dataops/data
+log_dir: .dataops/logs
+database:
+  type: sqlite
+  path: .dataops/data.db
+  host: localhost
+  port: 5432
+  name: customer_data
+  user: admin
+  password: password
+airflow:
+  home: .dataops/airflow
+quality:
+  table_name: data_table
